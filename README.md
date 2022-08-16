@@ -89,31 +89,23 @@
 17. `mkfs.vfat -F 32 -n boot /dev/mmcblk0p1` to  format partition 1 as fat32
 18. `mkfs.ext4 -L root /dev/mmcblk0p2` to format partition 2 as ext4
 19.  Mount the formatted partitions.
-	```
-	root@emmc:~# mkdir -p /media/sd-mmcblk0p1
-	root@emmc:~# mkdir -p /media/sd-mmcblk0p2
-	root@emmc:~# mount /dev/mmcblk0p1 /media/sd-mmcblk0p1
-	root@emmc:~# mount /dev/mmcblk0p2 /media/sd-mmcblk0p2
-	
-	```
+```root@emmc:~# mkdir -p /media/sd-mmcblk0p1```
+```root@emmc:~# mkdir -p /media/sd-mmcblk0p2```
+```root@emmc:~# mount /dev/mmcblk0p1 /media/sd-mmcblk0p1```
+```root@emmc:~# mount /dev/mmcblk0p2 /media/sd-mmcblk0p2```
 ## File transfer using SSH
 20. Set IP address of eth0 to local LAN. In our case its 172.32.8.201
 ```ifconfig eth0 172.32.8.201 netmask 255.255.255.0```
 21. Ping the BJ server to check LAN connection
 ```ping 172.32.8.10```
 22.  Use ssh secure copy protocol (scp) to transfer BOOT.BIN, boot.scr and Image file to partition 1 of the eMMC.
-	```
-	root@emmc:~# scp Mazharul@172.32.8.10:/path/to/project/images/linux/BOOT.BIN /media/sd-mmcblk0p1
-	root@emmc:~# scp Mazharul@172.32.8.10:/path/to/project/images/linux/boot.scr /media/sd-mmcblk0p1
-	root@emmc:~# scp Mazharul@172.32.8.10:/path/to/project/images/linux/Image /media/sd-mmcblk0p1
-	
-	```
+```root@emmc:~# scp Mazharul@172.32.8.10:/path/to/project/images/linux/BOOT.BIN /media/sd-mmcblk0p1```
+```root@emmc:~# scp Mazharul@172.32.8.10:/path/to/project/images/linux/boot.scr /media/sd-mmcblk0p1```
+```root@emmc:~# scp Mazharul@172.32.8.10:/path/to/project/images/linux/Image /media/sd-mmcblk0p1```
 23. Transfer rootfs.tar.gz to partition 2 of the eMMC and extract it there.
-	```
-	root@emmc:~# scp Mazharul@172.32.8.10:/path/to/project/images/linux/rootfs.tar.gz /media/sd-mmcblk0p2
-	root@emmc:~# cd /media/sd-mmcblk0p2
-	root@emmc:/media/sd-mmcblk0p2# tar -xzvf rootfs.tar.gz
-	```
+```root@emmc:~# scp Mazharul@172.32.8.10:/path/to/project/images/linux/rootfs.tar.gz /media/sd-mmcblk0p2```
+```root@emmc:~# cd /media/sd-mmcblk0p2```
+```root@emmc:/media/sd-mmcblk0p2# tar -xzvf rootfs.tar.gz```
 ## eMMC Boot
 24. Change boot mode to EMMC_MODE
 25. Turn on the board.
