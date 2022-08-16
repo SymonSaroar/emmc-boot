@@ -94,6 +94,7 @@
 	root@emmc:~# mkdir -p /media/sd-mmcblk0p2
 	root@emmc:~# mount /dev/mmcblk0p1 /media/sd-mmcblk0p1
 	root@emmc:~# mount /dev/mmcblk0p2 /media/sd-mmcblk0p2
+	
 	```
 ## File transfer using SSH
 20. Set IP address of eth0 to local LAN. In our case its 172.32.8.201
@@ -105,6 +106,7 @@
 	root@emmc:~# scp Mazharul@172.32.8.10:/path/to/project/images/linux/BOOT.BIN /media/sd-mmcblk0p1
 	root@emmc:~# scp Mazharul@172.32.8.10:/path/to/project/images/linux/boot.scr /media/sd-mmcblk0p1
 	root@emmc:~# scp Mazharul@172.32.8.10:/path/to/project/images/linux/Image /media/sd-mmcblk0p1
+	
 	```
 23. Transfer rootfs.tar.gz to partition 2 of the eMMC and extract it there.
 	```
