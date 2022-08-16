@@ -20,10 +20,10 @@
 	- [X] openssh-keygen --- `filesystem packages > console > network > openssh`
 	- [X] openssh-scp --- `filesystem packages > console > network > openssh`
 	- [X] openssh-sftp-server --- `filesystem packages > console > network > openssh`
-	**Disable these packages** 
-	- [ ] imagefeature-ssh-server-dropbear-- --- `Image Features`
-	- [ ] packagegroup-core-ssh-dropbear --- `filesystem packages > misc > packagegroup-core-ssh-dropbear`
-	- [ ] dropbear --- `filesystem packages > console > network > dropbear`
+	- **Disable these packages** 
+		- [ ] imagefeature-ssh-server-dropbear-- --- `Image Features`
+		- [ ] packagegroup-core-ssh-dropbear --- `filesystem packages > misc > packagegroup-core-ssh-dropbear`
+		- [ ] dropbear --- `filesystem packages > console > network > dropbear`
 - **Optional**
 	- [X] busybox --- `filesystem packages > base > busybox`
 	- [X] tar --- `filesystem packages > base > tar`
