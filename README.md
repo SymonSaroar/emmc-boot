@@ -112,11 +112,11 @@
 	root@emmc:~# scp Mazharul@172.32.8.10:/path/to/project/images/linux/Image /media/sd-mmcblk0p1
 
 23. Transfer rootfs.tar.gz to partition 2 of the eMMC and extract it there.
-
-	root@emmc:~# scp Mazharul@172.32.8.10:/path/to/project/images/linux/rootfs.tar.gz /media/sd-mmcblk0p2
-	root@emmc:~# cd /media/sd-mmcblk0p2
-	root@emmc:/media/sd-mmcblk0p2# tar -xzvf rootfs.tar.gz
-
+```
+root@emmc:~# scp Mazharul@172.32.8.10:/path/to/project/images/linux/rootfs.tar.gz /media/sd-mmcblk0p2
+root@emmc:~# cd /media/sd-mmcblk0p2
+root@emmc:/media/sd-mmcblk0p2# tar -xzvf rootfs.tar.gz
+```
 ## eMMC Boot
 24. Change boot mode to EMMC_MODE
 25. Turn on the board.
